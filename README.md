@@ -4,6 +4,8 @@ Paste a git diff and see exactly which tests need to run. Every selected test co
 the import chain that connects it to your change, so you can check the reasoning
 instead of trusting it.
 
+**Live demo: [test-impact-explorer.vercel.app](https://test-impact-explorer.vercel.app)**. Click an example to see it work.
+
 ![Test Impact Explorer showing that a change to date.ts affects 3 of 8 tests](docs/screenshot.png)
 
 ## Why
