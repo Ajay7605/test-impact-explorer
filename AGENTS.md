@@ -23,6 +23,7 @@ affected by the change, with the import chain that explains each one. See `READM
 | Lint + typecheck + unit tests | `npm run check` |
 | Unit tests only | `npm test` |
 | End-to-end tests | `npm run build && npm run test:e2e` |
+| E2E against the live site | `BASE_URL=https://test-impact-explorer.vercel.app npx playwright test` |
 | README screenshots | `npm run start -- --port 3100`, then `node scripts/screenshot.mjs` |
 
 Before you say a change is done, `npm run check` must pass. If you touched anything
