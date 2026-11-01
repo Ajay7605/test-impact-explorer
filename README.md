@@ -100,9 +100,21 @@ npm run dev            # http://localhost:3000
 CI runs all of these on every push and pull request
 ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)).
 
-## Deploying to Azure Static Web Apps
+The same e2e suite can check a deployed site:
 
-The repo includes a workflow that deploys `main` to production and gives each pull
+```bash
+BASE_URL=https://test-impact-explorer.vercel.app npx playwright test
+```
+
+## Deploying
+
+### Vercel (live demo)
+The live demo runs on Vercel's free Hobby plan. Vercel detects Next.js automatically,
+and the app needs no environment variables. Deploy with `vercel deploy --prod`, or
+import the repo at [vercel.com/new](https://vercel.com/new) to deploy on every push.
+
+### Azure Static Web Apps
+The repo also includes a workflow that deploys `main` to Azure and gives each pull
 request its own preview URL.
 
 1. In the Azure portal, create a **Static Web App** on the free plan. Choose
