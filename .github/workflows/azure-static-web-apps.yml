@@ -23,7 +23,7 @@ jobs:
         run: |
           if [ -n "$TOKEN" ]; then echo "present=true" >> "$GITHUB_OUTPUT"
           else echo "::notice::AZURE_STATIC_WEB_APPS_API_TOKEN is not set, skipping deploy."; fi
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         if: steps.token.outputs.present == 'true'
       - name: Build and deploy
         if: steps.token.outputs.present == 'true'
